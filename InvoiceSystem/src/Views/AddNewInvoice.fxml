@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.AddNewInvoiceController">
+    <stylesheets>
+        <URL value="@/Style/addnewinvoice.css" />
+    </stylesheets>
+   <children>
+      <Pane focusTraversable="true" prefHeight="570.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField layoutX="46.0" layoutY="40.0" promptText="Customer Name" />
+            <TextField layoutX="226.0" layoutY="40.0" promptText="Customer Address" />
+            <TextField layoutX="408.0" layoutY="40.0" promptText="Licence No" />
+            <TextField layoutX="46.0" layoutY="98.0" promptText="Book by" />
+            <TextField layoutX="226.0" layoutY="98.0" promptText="Deliver By" />
+            <ChoiceBox layoutX="407.0" layoutY="98.0" prefWidth="150.0" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

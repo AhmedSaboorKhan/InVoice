@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="689.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddNewProductController">
+    <stylesheets>
+        <URL value="@/Style/addnewproduct.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="664.0" prefWidth="689.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutY="-1.0" prefHeight="28.0" prefWidth="689.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField fx:id="ProductName" layoutX="37.0" layoutY="72.0" prefHeight="36.0" prefWidth="260.0" promptText="Product Name" />
+            <TextField fx:id="Quanlity" layoutX="345.0" layoutY="72.0" prefHeight="36.0" prefWidth="260.0" promptText="Quanlity : No of Packs" />
+            <TextField fx:id="RetailerPrice" layoutX="37.0" layoutY="151.0" prefHeight="36.0" prefWidth="260.0" promptText="Retailer Price" />
+            <TextField fx:id="Detail" layoutX="345.0" layoutY="151.0" prefHeight="36.0" prefWidth="260.0" promptText="Detail" />
+            <DatePicker fx:id="ManufacturedDate" layoutX="37.0" layoutY="234.0" prefHeight="36.0" prefWidth="260.0" promptText="Manufactured Date" />
+            <DatePicker fx:id="ExpiredDate" layoutX="345.0" layoutY="234.0" prefHeight="36.0" prefWidth="260.0" promptText="Expired Date" />
+            <TableView layoutY="300.0" prefHeight="327.0" prefWidth="516.0">
+              <columns>
+                <TableColumn prefWidth="107.0" text="Product Code" />
+                <TableColumn prefWidth="108.0" text="Product Name" />
+                  <TableColumn prefWidth="75.0" text="Quanlity" />
+                  <TableColumn prefWidth="128.0" text="Manufactured Date" />
+                  <TableColumn prefWidth="97.0" text="Expired Date" />
+              </columns>
+            </TableView>
+            <Button fx:id="AddProduct" layoutX="553.0" layoutY="301.0" mnemonicParsing="false" onAction="#AddProductName" prefHeight="25.0" prefWidth="109.0" text="Add" />
+            <Button layoutX="553.0" layoutY="471.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="View" />
+            <Button layoutX="553.0" layoutY="516.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Edit" />
+            <Button layoutX="553.0" layoutY="564.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Delete" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
