@@ -47,7 +47,7 @@ public class AddNewInvoiceController implements Initializable {
     Button submitButton;
 
     //Declare Variables
-    private String SelectCustomerCode, SelectProductName, SelectQuanlity, SelectDiscount;
+    private String SelectCustomerCode, SelectProductName, SelectQuanlity, SelectDiscount, SelectTotalPrice;
 
     /**
      * Initializes the controller class.
@@ -75,7 +75,7 @@ public class AddNewInvoiceController implements Initializable {
      * @param event
      */
     @FXML
-    private void SubmitButtonAction(ActionEvent event) {
+    private void SubmitButtonAction(ActionEvent event) throws SQLException {
         //System.out.println("Controllers.AddNewInvoiceController.SubmitButtonAction()");
         setSelectProductName(ProductName.getValue().toString());
         setSelectDiscount(Discount.getText());
@@ -87,7 +87,10 @@ public class AddNewInvoiceController implements Initializable {
         addInvoiceModel.setProductName(ProductName.getValue().toString());
         addInvoiceModel.setProductDiscount(Discount.getText());
         
-        addInvoiceModel.calculateProductPrice();
+        // Get Product Price
+        int productPrice = addInvoiceModel.calculateProductPrice();
+        // Set Product pr
+        setSelectTotalPrice(Integer.toString(productPrice));
     }
 
     /**
@@ -144,6 +147,20 @@ public class AddNewInvoiceController implements Initializable {
      */
     public void setSelectDiscount(String SelectDiscount) {
         this.SelectDiscount = SelectDiscount;
+    }
+
+    /**
+     * @return the SelectProductPrice
+     */
+    public String getSelectTotalPrice() {
+        return SelectTotalPrice;
+    }
+
+    /**
+     * @param SelectTotalPrice the SelectProductPrice to set
+     */
+    public void setSelectTotalPrice(String SelectTotalPrice) {
+        this.SelectTotalPrice = SelectTotalPrice;
     }
 
 }
