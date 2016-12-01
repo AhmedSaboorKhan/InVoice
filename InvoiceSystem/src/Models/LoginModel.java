@@ -19,7 +19,7 @@ public class LoginModel {
     * Login Model constructor.
     */
     public LoginModel() {
-        System.out.println("Login Model"); 
+        //System.out.println("Login Model"); 
     }
     
     /**
@@ -37,8 +37,8 @@ public class LoginModel {
             String Query = "SELECT * FROM people WHERE Username = ? AND Password = ?";
             
             PreparedStatement  preparedStatementObject  = conObject.prepareStatement(Query);
-            preparedStatementObject.setString(1, "nisar");
-            preparedStatementObject.setString(2, "1234");
+            preparedStatementObject.setString(1, userName);
+            preparedStatementObject.setString(2, Password);
             ResultSet resultValue = preparedStatementObject.executeQuery();
             //System.out.println('value'+resultValue.next());
             userExist = resultValue.next();

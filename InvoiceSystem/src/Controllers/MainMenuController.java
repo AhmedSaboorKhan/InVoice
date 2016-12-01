@@ -21,12 +21,34 @@ import javafx.stage.Stage;
  * @author Ahmed Saboor
  */
 public class MainMenuController implements Initializable {
-    // Add New Invoice 
+    
+    /**
+     * Add New Customer
+     * @param event 
+     */
+    @FXML
+    private void AddCustomerActionButton(ActionEvent event) {
+        // Switch To Add New Invoice View
+        try {    
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/AddCustomer.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Add New Customer");
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Add New Invoice
+     * @param event 
+     */
     @FXML
     private void addNewInvoice(ActionEvent event) {
         // Switch To Add New Invoice View
-        try {
-            
+        try {    
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/AddNewInvoice.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
@@ -37,11 +59,15 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
     }
-
-    // Add New Product 
+    
+    /**
+     * Add New Product
+     * @param event 
+     */
     @FXML
     private void addNewProduct ( ActionEvent event ) {
         // Switch To Add New Product
+        
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/AddNewProduct.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -56,6 +82,8 @@ public class MainMenuController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

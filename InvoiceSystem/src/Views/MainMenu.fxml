@@ -14,8 +14,9 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="AddNewInvoice" layoutX="94.0" layoutY="42.0" mnemonicParsing="false" onAction="#addNewInvoice" prefHeight="31.0" prefWidth="116.0" text="Add New Invoice" />
-            <Button layoutX="333.0" layoutY="42.0" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="31.0" prefWidth="116.0" text="Add New Product" />
+            <Button fx:id="AddNewInvoice" layoutX="60.0" layoutY="42.0" mnemonicParsing="false" onAction="#addNewInvoice" prefHeight="31.0" prefWidth="116.0" text="Add New Invoice" />
+            <Button layoutX="242.0" layoutY="42.0" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="31.0" prefWidth="116.0" text="Add New Product" />
+            <Button fx:id="AddCustomer" layoutX="430.0" layoutY="42.0" mnemonicParsing="false" onAction="#AddCustomerActionButton" prefHeight="31.0" prefWidth="116.0" text="Add Customer" />
          </children>
       </Pane>
    </children>
