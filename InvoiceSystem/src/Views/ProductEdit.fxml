@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.ProductEditController">
+    <stylesheets>
+        <URL value="@/Style/productedit.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-36.0" layoutY="56.0" prefHeight="511.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="34.0" prefHeight="26.0" prefWidth="108.0" text="Product Name:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ProductName" layoutX="122.0" layoutY="34.0" prefHeight="25.0" prefWidth="167.0" />
+            <Label layoutX="326.0" layoutY="34.0" prefHeight="25.0" prefWidth="101.0" text="Retail Price:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="RetailPrice" layoutX="413.0" layoutY="34.0" prefHeight="25.0" prefWidth="167.0" />
+            <Label layoutX="14.0" layoutY="107.0" prefHeight="17.0" prefWidth="101.0" text="Quanlity:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Quanlity" layoutX="122.0" layoutY="105.0" prefHeight="25.0" prefWidth="167.0" />
+            <Label layoutX="326.0" layoutY="109.0" prefHeight="20.0" prefWidth="87.0" text=" Manu Date:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="ManuDate" layoutX="410.0" layoutY="107.0" />
+            <Label layoutX="14.0" layoutY="166.0" prefHeight="17.0" prefWidth="108.0" text="Expired Date:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="ExpDate" layoutX="122.0" layoutY="164.0" />
+            <Button fx:id="btnUpdate" layoutX="326.0" layoutY="234.0" mnemonicParsing="false" onAction="#UpdateProductAction" prefHeight="25.0" prefWidth="87.0" text="Update" />
+            <Button fx:id="BtnClose" layoutX="436.0" layoutY="234.0" mnemonicParsing="false" onAction="#CloseProductAction" prefHeight="25.0" prefWidth="87.0" text="Close" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

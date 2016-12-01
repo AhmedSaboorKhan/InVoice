@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="689.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddCustomerController">
+    <stylesheets>
+        <URL value="@/Style/addnewproduct.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="664.0" prefWidth="689.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutY="-1.0" prefHeight="28.0" prefWidth="689.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField fx:id="CustomerName" layoutX="37.0" layoutY="72.0" prefHeight="36.0" prefWidth="260.0" promptText="Customer Name" />
+            <TextField fx:id="CustomerPhoneNumber" layoutX="345.0" layoutY="72.0" prefHeight="36.0" prefWidth="260.0" promptText="Phone Number" />
+            <TableView fx:id="addCustomerTable" layoutY="300.0" prefHeight="327.0" prefWidth="516.0">
+              <columns>
+                <TableColumn fx:id="customerCodes" prefWidth="107.0" text="Customer Code" />
+                <TableColumn fx:id="customerNames" prefWidth="108.0" text="Customer Name" />
+                  <TableColumn fx:id="customerPhones" prefWidth="75.0" text="Phone " />
+                  <TableColumn fx:id="customerAreas" prefWidth="99.0" text="Area" />
+                  <TableColumn fx:id="customerAddresses" prefWidth="126.0" text="Address" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="CustomerAddress" layoutX="37.0" layoutY="126.0" prefHeight="95.0" prefWidth="569.0" promptText="Enter the Address.." />
+            <TextField fx:id="CustomerArea" layoutX="37.0" layoutY="237.0" prefHeight="36.0" prefWidth="569.0" promptText="Area" />
+            <Button fx:id="buttonAddCustomer" layoutX="547.0" layoutY="301.0" mnemonicParsing="false" onAction="#AddCustomerAction" prefHeight="28.0" prefWidth="106.0" text="Add" />
+            <Button fx:id="buttonEditCustomer" layoutX="547.0" layoutY="492.0" mnemonicParsing="false" onAction="#EditCustomerAction" prefHeight="28.0" prefWidth="106.0" text="Edit" />
+            <Button fx:id="buttonDeleteCustomer" layoutX="547.0" layoutY="560.0" mnemonicParsing="false" onAction="#DeleteCustomerAction" prefHeight="28.0" prefWidth="106.0" text="Delete" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
